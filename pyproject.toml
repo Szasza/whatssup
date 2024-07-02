@@ -1,6 +1,13 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "whatssup"
 version = "0.0.1"
 dependencies = [
     "supervisor",
 ]
+
+[project.scripts]
+timemon = "whatssup.timemon:main"
