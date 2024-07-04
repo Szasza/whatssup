@@ -98,6 +98,8 @@ jobs:
 
   publish-to-testpypi:
     name: Publish distribution to TestPyPI
+    # only publish to Test PyPI on v* tag pushes
+    if: startsWith(github.ref, 'refs/tags/v')
     needs:
       - build
     runs-on: ubuntu-latest
